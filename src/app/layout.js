@@ -4,13 +4,18 @@ import Navbar from "../components/Navbar";
 import "./globals.css";
 
 const fetchStatusDescription = async (code) => {
-  const res = await fetch(`https://http.dev/${code}`, {
-    next: { revalidate: 60 },
-  });
-  const text = await res.text();
-  const descriptionMatch = text.match(/<p>(.*?)<\/p>/);
-  const description = descriptionMatch ? descriptionMatch[1] : "No description available";
-  return { code, description };
+  try {
+    const res = await fetch(`https://http.dev/${code}`, {
+      next: { revalidate: 60 },
+    });
+
+    const text = await res.text();
+    const descriptionMatch = text.match(/<p>(.*?)<\/p>/);
+    const description = descriptionMatch ? descriptionMatch[1] : "No description available";
+    return { code, description };
+  } catch (err) {
+    console.error("An error occurred while fetching descriptions: ", err);
+  }
 };
 
 const RootLayout = async ({ children }) => {

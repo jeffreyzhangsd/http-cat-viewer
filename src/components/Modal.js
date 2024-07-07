@@ -24,7 +24,7 @@ export default function Modal({ group, code, onClose }) {
         <Link
           href={`/${group}/${status}`}
           className="text-2xl font-bold underline text-center text-gray-800 dark:text-white">
-          Status Code: {status}
+          Learn more about {status}!
         </Link>
         <Image
           src={`https://http.cat/${status}`}
