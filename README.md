@@ -26,4 +26,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - [https://http.cat/](https://http.cat/)
 - [https://http.dev/](https://http.dev/)
-- [https://umbraco.com/knowledge-base/http-status-codes/](https://umbraco.com/knowledge-base/http-status-codes/)
+- [https://umbraco.com/](https://umbraco.com/knowledge-base/http-status-codes/)
