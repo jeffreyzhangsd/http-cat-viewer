@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project for the WeCracked NextJS Hackathon!
+
+Check it out on vercel here: [https://http-cat-viewer.vercel.app/](https://http-cat-viewer.vercel.app/)
 
 ## Getting Started
 
