@@ -34,7 +34,7 @@ export default function StatusCodeSearch() {
       <input
         type="text"
         name="statusCode"
-        maxlength="3"
+        maxLength="3"
         placeholder="Search for a 3 digit status code!"
         className="px-2 py-1 mb-2 border rounded text-center w-[300px]"
         autoComplete="off"
