@@ -4,9 +4,9 @@ Check it out on vercel here: [https://http-cat-viewer.vercel.app/](https://http-
 
 ## Getting Started
 
-First, you can fork this repository above if you'd like your own version
-then you can use git clone to copy this repository
-after cloning, you will want to install the dependencies and then run the next app.
+First, you can fork this repository above if you'd like your own version,
+then you can use git clone to copy this repository,
+after cloning, you will want to install the dependencies and run the next app.
 
 ```bash
 npm install

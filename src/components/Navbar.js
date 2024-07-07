@@ -9,7 +9,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="text-gray-800 self-center dark:text-white text-sm px-1 py-1 rounded-md lg:text-3xl font-bold  hover:bg-gray-400 dark:hover:bg-gray-400">
-            HTTP Cats Viewer
+            HTTP Cat Viewer
           </Link>
           <ChangeTheme />
         </div>
