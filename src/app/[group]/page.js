@@ -48,13 +48,6 @@ export default function StatusCodeGroup({ params }) {
   );
 }
 
-const statusCodesOnly = [
-  100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304,
-  305, 307, 308, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415,
-  416, 417, 418, 420, 421, 422, 423, 424, 425, 426, 428, 429, 431, 444, 450, 451, 497, 498, 499,
-  500, 501, 502, 503, 504, 506, 507, 508, 509, 510, 511, 521, 522, 523, 525, 599,
-];
-
 // statusCodes -> key: {description, codes: [{ status, desc }]}
 const statusCodes = {
   "1xx": {
@@ -161,7 +154,10 @@ const statusCodes = {
         status: 418,
         desc: "I'm a teapot: The server refuses to brew coffee because it is a teapot.",
       },
-      { status: 420, desc: "Enhance Your Calm: Twitter rate limiting." },
+      {
+        status: 420,
+        desc: "Enhance Your Calm: Deprecated status that used to indicate failure from the Spring Framework, also a deprecated status that used to indicate a rate limit from Twitter.",
+      },
       {
         status: 421,
         desc: "Misdirected Request: Request directed at a server that is not able to produce a response.",
@@ -211,7 +207,7 @@ const statusCodes = {
       { status: 498, desc: "Invalid Token: Token expired/invalid (Esri)." },
       {
         status: 499,
-        desc: "Client Closed Request: Connection closed by client while HTTP server is processing.",
+        desc: "Client Closed Request: Specific to ArcGIS and nginx, connection closed by client while HTTP server is processing.",
       },
     ],
   },
@@ -255,16 +251,23 @@ const statusCodes = {
       },
       {
         status: 521,
-        desc: "Web Server Is Down: The origin server has refused the connection from Cloudflare.",
+        desc: "Web Server Is Down: Specific to Cloudflare, the origin server has refused the connection from Cloudflare.",
       },
       {
         status: 522,
-        desc: "Connection Timed Out: Cloudflare could not negotiate a TCP handshake with the origin server.",
+        desc: "Connection Timed Out: Specific to Cloudflare, could not negotiate a TCP handshake with the origin server.",
       },
-      { status: 523, desc: "Origin Is Unreachable: Cloudflare could not reach the origin server." },
+      {
+        status: 523,
+        desc: "Origin Is Unreachable: Specific to Cloudflare, could not reach the origin server.",
+      },
       {
         status: 525,
-        desc: "SSL Handshake Failed: Cloudflare could not negotiate a SSL/TLS handshake with the origin server.",
+        desc: "SSL Handshake Failed: Specific to Cloudflare, could not negotiate a SSL/TLS handshake with the origin server.",
+      },
+      {
+        status: 530,
+        desc: "Site Frozen: Specific to Cloudflare, an issue between user and website server and Pantheon, when an inactive Sandbox Site denies HTTP requests.",
       },
       {
         status: 599,
