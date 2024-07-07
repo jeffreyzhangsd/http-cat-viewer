@@ -1,7 +1,9 @@
 import Link from "next/link";
 import ChangeTheme from "./ChangeTheme";
 
+// Navigation bar at top of page
 export default function Navbar() {
+  // allows user to navigate to home (blank path) and any of the status code groups (1xx, 2xx, etc.)
   return (
     <nav className="bg-gray-200 dark:bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">

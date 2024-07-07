@@ -11,10 +11,13 @@ const statusCodesOnly = [
   500, 501, 502, 503, 504, 506, 507, 508, 509, 510, 511, 521, 522, 523, 525, 530, 599,
 ];
 
+// Component on home page that lets user search status codes
 export default function StatusCodeSearch() {
+  // starting with the 200 OK cat
   const [statusCode, setStatusCode] = useState("200");
   const [statusCodeGroup, setStatusCodeGroup] = useState("2xx");
 
+  // function that sets the status code and group only when it is valid, otherwise sets to 404
   const handleChange = (e) => {
     e.preventDefault();
     const input = e.target.value;
@@ -29,6 +32,7 @@ export default function StatusCodeSearch() {
     }
   };
 
+  // input component for user to type into, link that leads to status code url, image component
   return (
     <div className="flex flex-1 flex-col mb-4 items-center">
       <input

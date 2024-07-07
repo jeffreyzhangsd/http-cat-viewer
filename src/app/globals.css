@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* set up to use tailwind */
 :root {
   --foreground-rgb: 11, 11, 11;
   --background-rgb: 11, 11, 11;

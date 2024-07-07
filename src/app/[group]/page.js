@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Modal from "../../components/Modal";
 
+// URL path for status code groups (1xx, 2xx, 3xx, etc.)
 export default function StatusCodeGroup({ params }) {
   const [selectedCode, setSelectedCode] = useState(null);
 
@@ -11,6 +12,7 @@ export default function StatusCodeGroup({ params }) {
 
   return (
     <main className="p-6">
+      {/* If the status code group is not valid, render a doesn't exist component, otherwise load everything */}
       {statusCodes[params.group] ? (
         <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
           {params.group} Status Codes - Click a card for a short description!
@@ -25,7 +27,7 @@ export default function StatusCodeGroup({ params }) {
       {/* grid that changes size according to screen size */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
         {group.codes.map((code) => (
-          // each card and their styles
+          // maps to each individual card and their styles
           <div
             key={code.status}
             className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 cursor-pointer hover:bg-gray-400 transition-shadow bg-gray-200 dark:bg-black dark:hover:bg-gray-400"
@@ -41,12 +43,16 @@ export default function StatusCodeGroup({ params }) {
           </div>
         ))}
       </div>
+      {/* Modal pop up if a code status is selected */}
       {selectedCode && (
         <Modal group={params.group} code={selectedCode} onClose={() => setSelectedCode(null)} />
       )}
     </main>
   );
 }
+
+// statusCodes object that contains status code groups, their descriptions
+// and then their specific codes and those descriptions as well
 
 // statusCodes -> key: {description, codes: [{ status, desc }]}
 const statusCodes = {

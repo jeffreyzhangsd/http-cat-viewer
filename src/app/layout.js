@@ -3,6 +3,10 @@ import { StatusCodesProvider } from "./context/StatusCodesContext";
 import Navbar from "../components/Navbar";
 import "./globals.css";
 
+// Layout of entire app, anything that needs to be passed down has to come from here
+// This includes the theme and status code descriptions that we fetch and save, then pass down
+
+// fetch function with regeneration
 const fetchStatusDescription = async (code) => {
   try {
     const res = await fetch(`https://http.dev/${code}`, {
@@ -18,6 +22,7 @@ const fetchStatusDescription = async (code) => {
   }
 };
 
+// Main layout function, the rest of the app is passed in as a child
 const RootLayout = async ({ children }) => {
   const statusCodesOnly = [
     100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304,

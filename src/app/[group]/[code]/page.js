@@ -5,11 +5,14 @@ import Link from "next/link";
 import { useStatusCodes } from "../../context/StatusCodesContext";
 import { htmlToText } from "html-to-text";
 
+// URL path for status codes, after groups (1xx/100, 2xx/200, 4xx/404, etc. )
 export default function StatusCode({ params }) {
+  // grabs the group and code from the parameters in the URL
   const { code, group } = params;
   const statusCodes = useStatusCodes();
   const statusCode = statusCodes.find((sc) => sc.code.toString() === code);
 
+  // if statusCode is a valid status code, uses the data fetched in layout in the description
   return (
     <main className="flex flex-col items-center justify-center max-h-full p-2">
       {statusCode ? (

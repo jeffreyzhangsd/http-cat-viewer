@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// Modal that shows up when the user clicks on a status code card
 export default function Modal({ group, code, onClose }) {
   const [description, setDescription] = useState("");
   const { status } = code;
@@ -14,6 +15,7 @@ export default function Modal({ group, code, onClose }) {
     setDescription(desc);
   }, [desc]);
 
+  // closes when the user clicks anywhere outside the modal
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"

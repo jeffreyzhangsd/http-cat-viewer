@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 
+// Component to change from light or dark theme
 export default function ChangeTheme() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -11,6 +12,7 @@ export default function ChangeTheme() {
 
   if (!mounted) return null;
 
+  // using a sun and moon svg, when the theme changes it renders the correct symbol
   return (
     <button
       className="p-2 rounded-md hover:bg-gray-400 dark:hover:bg-gray-400"
