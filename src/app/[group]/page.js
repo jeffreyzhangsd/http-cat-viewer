@@ -16,7 +16,7 @@ export default function StatusCodeGroup({ params }) {
           {params.group} Status Codes - Click a card for a short description!
         </h1>
       ) : (
-        <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
+        <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white text-center">
           {" "}
           This page doesn{"'"}t exist! Refer to the nav bar above 🙂
         </h1>

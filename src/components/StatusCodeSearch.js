@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const statusCodesOnly = [
   100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304,
@@ -12,6 +13,7 @@ const statusCodesOnly = [
 
 export default function StatusCodeSearch() {
   const [statusCode, setStatusCode] = useState("200");
+  const [statusCodeGroup, setStatusCodeGroup] = useState("2xx");
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -19,8 +21,10 @@ export default function StatusCodeSearch() {
     if (input.length === 3) {
       if (statusCodesOnly.includes(parseInt(input))) {
         setStatusCode(input || "404");
+        setStatusCodeGroup(input[0] + "xx");
       } else {
         setStatusCode("404");
+        setStatusCodeGroup("4xx");
       }
     }
   };
@@ -30,11 +34,15 @@ export default function StatusCodeSearch() {
       <input
         type="text"
         name="statusCode"
+        maxlength="3"
         placeholder="Search for a 3 digit status code!"
         className="px-2 py-1 mb-2 border rounded text-center w-[300px]"
-        autocomplete="off"
+        autoComplete="off"
         onChange={handleChange}
       />
+      <Link href={`/${statusCodeGroup}/${statusCode}`} className="text-blue-500 underline">
+        Click here to learn more about {statusCode}
+      </Link>
       <Image
         src={`https://http.cat/${statusCode}`}
         width={500}
