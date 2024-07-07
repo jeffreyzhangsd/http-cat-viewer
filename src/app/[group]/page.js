@@ -11,10 +11,17 @@ export default function StatusCodeGroup({ params }) {
 
   return (
     <main className="p-6">
-      <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
-        {params.group} Status Codes
-      </h1>
-      <p className="mb-6 text-gray-600 dark:text-gray-400">{group.description}</p>
+      {statusCodes[params.group] ? (
+        <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
+          {params.group} Status Codes - Click a card for a short description!
+        </h1>
+      ) : (
+        <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
+          {" "}
+          This page doesn{"'"}t exist! Refer to the nav bar above 🙂
+        </h1>
+      )}
+      <p className="mx-2 mb-6 text-gray-600 dark:text-gray-400">{group.description}</p>
       {/* grid that changes size according to screen size */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
         {group.codes.map((code) => (
@@ -26,8 +33,8 @@ export default function StatusCodeGroup({ params }) {
             <Image
               src={`https://http.cat/${code.status}`}
               alt={`${code.status} Status Code`}
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               className="w-full h-auto"
             />
             {/* <p className="text-center mt-2 text-gray-800 dark:text-white">{code}</p> */}
@@ -40,6 +47,14 @@ export default function StatusCodeGroup({ params }) {
     </main>
   );
 }
+
+const statusCodesOnly = [
+  100, 101, 102, 103, 200, 201, 202, 203, 204, 205, 206, 207, 208, 226, 300, 301, 302, 303, 304,
+  305, 307, 308, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415,
+  416, 417, 418, 420, 421, 422, 423, 424, 425, 426, 428, 429, 431, 444, 450, 451, 497, 498, 499,
+  500, 501, 502, 503, 504, 506, 507, 508, 509, 510, 511, 521, 522, 523, 525, 599,
+];
+
 // statusCodes -> key: {description, codes: [{ status, desc }]}
 const statusCodes = {
   "1xx": {
