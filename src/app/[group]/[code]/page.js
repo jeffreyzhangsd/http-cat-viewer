@@ -26,18 +26,15 @@ export default function StatusCode({ params }) {
         {"< "}Back
       </Link>
       <h1 className="text-2xl font-bold mb-1 text-gray-800 dark:text-white">Status Code: {code}</h1>
-      <p className="text-lg mb-4 text-gray-600 dark:text-gray-300">
+      <p className="text-lg mb-4 text-gray-600 dark:text-gray-300 max-w-[80vw]">
         {htmlToText(statusCode.description)}
       </p>
-      {/* <p
-        className="text-lg mb-4 text-gray-600 dark:text-gray-300"
-        dangerouslySetInnerHTML={{ __html: statusCode.description }}
-      /> */}
       <Image
         src={`https://http.cat/${code}`}
         alt={`${code} Status Code`}
         width={600}
         height={600}
+        priority
       />
     </main>
   );

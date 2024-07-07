@@ -28,7 +28,7 @@ export default function StatusCodeGroup({ params }) {
           // each card and their styles
           <div
             key={code.status}
-            className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 cursor-pointer hover:bg-gray-400 transition-shadow bg-gray-200 dark:bg-black dark:hover:bg-gray-400"
+            className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 cursor-pointer hover:bg-gray-400 transition-shadow bg-gray-200 dark:bg-black dark:hover:bg-gray-400"
             onClick={() => setSelectedCode(code)}>
             <Image
               src={`https://http.cat/${code.status}`}
@@ -36,8 +36,8 @@ export default function StatusCodeGroup({ params }) {
               width={300}
               height={300}
               className="w-full h-auto"
+              priority // preloads images before user gets to page
             />
-            {/* <p className="text-center mt-2 text-gray-800 dark:text-white">{code}</p> */}
           </div>
         ))}
       </div>

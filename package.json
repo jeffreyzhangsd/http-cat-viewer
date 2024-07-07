@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.4",
     "html-to-text": "^9.0.5",
     "next": "14.2.4",
+    "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^8",

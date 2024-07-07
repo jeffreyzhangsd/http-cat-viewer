@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar";
 import "./globals.css";
 
 const fetchStatusDescription = async (code) => {
-  const res = await fetch(`https://http.dev/${code}`);
+  const res = await fetch(`https://http.dev/${code}`, {
+    next: { revalidate: 60 },
+  });
   const text = await res.text();
   const descriptionMatch = text.match(/<p>(.*?)<\/p>/);
   const description = descriptionMatch ? descriptionMatch[1] : "No description available";

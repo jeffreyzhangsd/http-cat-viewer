@@ -16,32 +16,32 @@ export default function Navbar() {
         <div className="space-x-2 md:space-x-3 lg:space-x-4 text-sm">
           <Link
             href="/"
-            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md ">
+            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md underline">
             Home
           </Link>
           <Link
             href="/1xx"
-            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md ">
+            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md underline">
             1xx
           </Link>
           <Link
             href="/2xx"
-            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md ">
+            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md underline">
             2xx
           </Link>
           <Link
             href="/3xx"
-            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md ">
+            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md underline">
             3xx
           </Link>
           <Link
             href="/4xx"
-            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md ">
+            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md underline">
             4xx
           </Link>
           <Link
             href="/5xx"
-            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md ">
+            className="text-gray-800 dark:text-white hover:bg-gray-400 dark:hover:bg-gray-400 px-1 py-1 rounded-md underline">
             5xx
           </Link>
         </div>
