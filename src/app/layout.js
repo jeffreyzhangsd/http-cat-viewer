@@ -1,6 +1,7 @@
 import { ThemeProvider } from "next-themes";
 import { StatusCodesProvider } from "./context/StatusCodesContext";
 import Navbar from "../components/Navbar";
+import { Metadata } from "next";
 import "./globals.css";
 
 // Layout of entire app, anything that needs to be passed down has to come from here
@@ -20,6 +21,13 @@ const fetchStatusDescription = async (code) => {
   } catch (err) {
     console.error("An error occurred while fetching descriptions: ", err);
   }
+};
+
+export const metadata = {
+  title: "HTTP Cat Viewer",
+  icons: {
+    icon: "../../public/next.svg",
+  },
 };
 
 // Main layout function, the rest of the app is passed in as a child
