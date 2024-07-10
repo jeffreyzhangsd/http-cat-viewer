@@ -1,6 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project for the WeCracked NextJS Hackathon!
+This is a [Next.js](https://nextjs.org/) project for the [WeCracked NextJS Hackathon](https://devpost.com/software/http-cat-viewer)!
 
 Check it out on vercel here: [https://http-cat-viewer.vercel.app/](https://http-cat-viewer.vercel.app/)
+
+Thanks to http.cat creator, [Rogério Vicente](https://rogeriopvl.com/).
 
 ## Getting Started
 
