@@ -22,6 +22,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+![image](https://github.com/jeffreyzhangsd/http-cat-viewer/assets/109628105/cf9f6f78-8778-46dd-a191-81576cfbd73a)
+
+
 ## Sources
 
 - [https://http.cat/](https://http.cat/)
