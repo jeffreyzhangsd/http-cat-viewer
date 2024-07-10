@@ -39,7 +39,7 @@ export default function StatusCode({ params }) {
       ) : (
         <h1 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">
           {" "}
-          This page doesn{"'"}t exist! Refer to the nav bar above 🙂
+          This page does not exist! Refer to the nav bar above 🙂
         </h1>
       )}
     </main>

@@ -26,7 +26,7 @@ const fetchStatusDescription = async (code) => {
 export const metadata = {
   title: "HTTP Cat Viewer",
   icons: {
-    icon: "../../public/next.svg",
+    icon: "/next.svg",
   },
 };
 
